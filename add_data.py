@@ -1,7 +1,10 @@
+from dotenv import load_dotenv
 from sqlalchemy import create_engine
 import pandas as pd
-from pg_link import PG_LINK
+import os
 
+load_dotenv(".env")
+PG_LINK = os.environ["PG_LINK"]
 engine = create_engine(PG_LINK)
 
 # Assuming your JSON data is stored in a file named 'data.json'

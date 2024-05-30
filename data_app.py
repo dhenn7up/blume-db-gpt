@@ -50,7 +50,6 @@ def chat_with_data():
 
     # Display all the previous messages
     for message in st.session_state.messages:
-        print(message)
         with st.chat_message(message["role"]):
             st.markdown(message["content"])
 

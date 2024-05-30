@@ -6,11 +6,11 @@ from langchain_experimental.sql import SQLDatabaseChain
 from langchain_community.utilities import SQLDatabase
 import chainlit as cl
 from dotenv import load_dotenv
-from pg_link import PG_LINK
 from langchain.schema.runnable.config import RunnableConfig
 
 # Load environment variables
 load_dotenv(".env")
+PG_LINK = os.environ["PG_LINK"]
 
 
 @cl.on_chat_start
