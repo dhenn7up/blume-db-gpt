@@ -27,7 +27,7 @@ def find_file_type_and_read(file):
         raise ValueError(f"Unsupported file type: {file_extension}")
 
 
-def chat_with_data():
+def main():
     st.title("Chat with your own data")
 
     uploaded_file = st.file_uploader(label="Choose file", type=["csv", "xlsx", "xls"])
@@ -73,4 +73,4 @@ def chat_with_data():
 
 
 if __name__ == "__main__":
-    chat_with_data()
+    main()
