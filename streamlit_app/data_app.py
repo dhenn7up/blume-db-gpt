@@ -1,7 +1,7 @@
 import streamlit as st
 from streamlit_chat import message
 import pandas as pd
-from llm_utils import chat_with_data_api
+from streamlit_app.llm_utils import chat_with_data_api
 from pathlib import Path
 
 
@@ -27,7 +27,7 @@ def find_file_type_and_read(file):
         raise ValueError(f"Unsupported file type: {file_extension}")
 
 
-def main():
+def chat_with_data():
     st.title("Chat with your own data")
 
     uploaded_file = st.file_uploader(label="Choose file", type=["csv", "xlsx", "xls"])
@@ -73,4 +73,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    chat_with_data()
