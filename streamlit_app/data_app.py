@@ -1,7 +1,7 @@
 import streamlit as st
 from streamlit_chat import message
 import pandas as pd
-from streamlit_app.llm_utils import chat_with_data_api
+from llm_utils import chat_with_data_api
 from pathlib import Path
 
 
