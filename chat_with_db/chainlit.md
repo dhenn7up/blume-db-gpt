@@ -21,5 +21,3 @@ This schema outlines the structure of the `amazon_reviews` table, detailing the 
 
 - **Blume GPT:** Alternate solution where you can use AI to analyse your own CSV or Excel files [Blume GPT](https://blume-gpt.prannaykedia.com) 📚
 - **Assignment One-pager:** Go through the one-pager for an in-depth discussion of the analysis [One Pager](https://discord.gg/k73SQ3FyUh) 💬
-- **Personal Website:** Check out my personal website [Prannay Kedia](https://prannaykedia.com) 👨🏽‍💻
-- **LinkedIn:** My LinkedIn profile for your perusal [Prannay's LinkedIn](https://www.linkedin.com/in/prannay-kedia) 💼
