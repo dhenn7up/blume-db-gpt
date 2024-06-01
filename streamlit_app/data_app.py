@@ -34,7 +34,8 @@ def chat_with_data():
     if uploaded_file is not None:
         df = find_file_type_and_read(uploaded_file)
         prompt = f"""You are a python expert. You will be given questions for
-            manipulating an input dataframe. For ploting a graph or a chart, use the library plotly.
+            manipulating an input dataframe. For ploting a graph or a chart, 
+            use the library plotly with streamlit UI and plotlyCharts tool.
             The available columns are: `{df.columns}`.
             Use them for extracting the relevant data.
         """

@@ -22,7 +22,7 @@ else:
 @tool
 def plotChart(data: str) -> int:
     """
-    Plots json data using plotly Figure. Use it only for plotting charts and graphs.
+    Plots json data using plotly Figure in streamlit UI. Use it only for plotting charts and graphs.
 
     Args:
         data (str): A JSON string representing the figure configuration.
@@ -64,20 +64,23 @@ def chat_with_data_api(df, model="gpt-4o"):
         df,
         verbose=True,
         return_intermediate_steps=True,
-        agent_type=AgentType.OPENAI_FUNCTIONS,
+        agent_type="tool-calling",
         extra_tools=tools,
     )
 
     try:
-        answer = pandas_df_agent(st.session_state.messages)
-        if answer["intermediate_steps"]:
-            action = answer["intermediate_steps"][-1][0].tool_input["query"]
-            st.write(f"Executed the code ```{action}```")
+        answer = pandas_df_agent.invoke(st.session_state.messages)
+        try:
+            if answer["intermediate_steps"]:
+                action = answer["intermediate_steps"][-1][0].tool_input["query"]
+                st.write(f"Executed the code ```{action}```")
+        except KeyError:
+            st.write(f"Executed the code")
         return answer["output"]
     except OutputParserException:
         error_msg = """OutputParserException error occured in LangChain agent.
             Refine your query."""
         return error_msg
     except:  # noqa: E722
-        answer = "Unknown error occured in LangChain agent. Refine your query"
+        error_msg = "Unknown error occured in LangChain agent. Refine your query"
         return error_msg
