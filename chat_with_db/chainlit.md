@@ -2,6 +2,8 @@
 
 Hi there! 👋 This is [my (Prannay Kedia)](https://prannaykedia.com) implementation of the assignment for Blume VC's development internship. This chat bot interacts with a database (Postgres DB) and runs SQL queries from normal human text.
 
+> **💡 Quick Tip: Use the bot to understand the structure of the DB!**
+
 ## Amazon Reviews Schema
 
 This schema outlines the structure of the `amazon_reviews` table, detailing the data types and descriptions of each column.
@@ -20,4 +22,4 @@ This schema outlines the structure of the `amazon_reviews` table, detailing the 
 ## Useful Links 🔗
 
 - **Blume GPT:** Alternate solution where you can use AI to analyse your own CSV or Excel files [Blume GPT](https://blume-gpt.prannaykedia.com) 📚
-- **Assignment One-pager:** Go through the one-pager for an in-depth discussion of the analysis [One Pager](https://discord.gg/k73SQ3FyUh) 💬
+- **Assignment One-pager:** Go through the one-pager for an in-depth discussion of the analysis [One Pager](https://docs.google.com/document/d/1KuTKd34k02EkyqAb4KT0WmOLy2kWQMRZmVrWbemEDlc/edit?usp=sharing) 💬
